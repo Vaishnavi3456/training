@@ -89,6 +89,65 @@ stack.pop(0)
 print(stack)
 
 
+# # Rock Paper Scissor Game (player vs computer)
+
+# In[23]:
+
+
+from random import randint
+arr=['rock','paper','scissor']
+user=input(f"Choose from {arr}").lower()
+com=arr[randint(0,2)]
+print("Computer chooses:",com)
+if user==com :
+    print("Draw Match")
+elif user=='paper' and com=='rock':
+    print("Player 1 wins")
+elif user=='rock' and com=='scissor':
+    print("Player 1 wins")
+elif user=='scissor' and com=='paper':
+    print("Player 1 wins")
+else:
+    print("Computer Wins")
+
+
+# In[37]:
+
+
+#Game with so many choices
+from random import randint
+arr=['rock','paper','scissor']
+l=3
+ps=0
+cs=0
+while True:
+    user=input(f"Choose from {arr}").lower()
+    com=arr[randint(0,2)]
+    print("Computer chooses:",com)
+    if user==com :
+        print("Draw Match")
+    elif user=='paper' and com=='rock':
+        print("Player 1 wins")
+        ps+=1
+    elif user=='rock' and com=='scissor':
+        print("Player 1 wins")
+        ps+=1
+    elif user=='scissor' and com=='paper':
+        print("Player 1 wins")
+        ps+=1
+    else:
+        print("Computer Wins")
+        cs+=1
+    if ps==l or cs==l:
+        break
+print(ps)
+print(cs)
+if ps>cs:
+    print("Player 1 Wins the game")
+else:
+    print("Computer Wins the game")
+
+
 # In[ ]:
 
 
